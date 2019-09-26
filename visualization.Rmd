@@ -28,7 +28,7 @@ weather_df =
 weather_df
 ```
 
-
+## Points
 ```{r}
 ggplot(weather_df, aes(x = tmin, y = tmax)) + 
   geom_point()
@@ -38,16 +38,6 @@ ggplot(weather_df, aes(x = tmin, y = tmax)) +
 weather_df %>%
   ggplot(aes(x = tmin, y = tmax)) + 
   geom_point()
-```
-
-
-```{r}
-plot_weather = 
-  weather_df %>%
-  ggplot(aes(x = tmin, y = tmax)) 
-
-plot_weather + geom_point()
-
 ```
 
 #advanced scatterplot
@@ -182,5 +172,24 @@ weather_df %>%
 # compare density in each group
 ggplot(weather_df, aes(x = tmax, y = name)) + 
   geom_density_ridges(scale = .85)
+```
+
+
+# Save a plot
+```{r}
+ggp_ridge_temp =
+  ggplot(weather_df, aes(x = tmax, y = name)) + 
+  geom_density_ridges(scale = .85)
+
+ggsave("ggplot_temp_ridge.pdf", ggp_ridge_temp) # automaticlly the last picture 
+```
+
+# Width
+
+```{r, fig.width= 12}
+weather_df %>% 
+  ggplot(aes(x = tmin,y = tmax,color = name)) +
+  geom_point(alpha = .5) +
+  geom_smooth(se = FALSE)
 ```
 

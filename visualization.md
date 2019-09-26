@@ -63,6 +63,8 @@ weather_df
     ## 10 CentralPark_NY USW00094728 2017-01-10     0   7.8  -6  
     ## # … with 1,085 more rows
 
+## Points
+
 ``` r
 ggplot(weather_df, aes(x = tmin, y = tmax)) + 
   geom_point()
@@ -82,18 +84,6 @@ weather_df %>%
 
 ![](visualization_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
-``` r
-plot_weather = 
-  weather_df %>%
-  ggplot(aes(x = tmin, y = tmax)) 
-
-plot_weather + geom_point()
-```
-
-    ## Warning: Removed 15 rows containing missing values (geom_point).
-
-![](visualization_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
-
 \#advanced scatterplot
 
 ``` r
@@ -103,7 +93,7 @@ ggplot(weather_df, aes(x = tmin, y = tmax)) +
 
     ## Warning: Removed 15 rows containing missing values (geom_point).
 
-![](visualization_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ``` r
 weather_df %>% 
@@ -118,7 +108,7 @@ weather_df %>%
     
     ## Warning: Removed 15 rows containing missing values (geom_point).
 
-![](visualization_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
 
 ``` r
 weather_df %>% 
@@ -133,7 +123,7 @@ weather_df %>%
     
     ## Warning: Removed 15 rows containing missing values (geom_point).
 
-![](visualization_files/figure-gfm/unnamed-chunk-5-3.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-4-3.png)<!-- -->
 
 ``` r
 weather_df %>% 
@@ -149,7 +139,7 @@ weather_df %>%
 
     ## Warning: Removed 15 rows containing missing values (geom_point).
 
-![](visualization_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
 weather_df %>% 
@@ -165,7 +155,7 @@ weather_df %>%
 
     ## Warning: Removed 3 rows containing missing values (geom_point).
 
-![](visualization_files/figure-gfm/unnamed-chunk-6-2.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->
 
 ``` r
 # no point
@@ -178,7 +168,7 @@ weather_df %>%
 
     ## Warning: Removed 3 rows containing non-finite values (stat_smooth).
 
-![](visualization_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 ``` r
 weather_df %>% 
@@ -193,7 +183,7 @@ weather_df %>%
 
     ## Warning: Removed 3 rows containing missing values (geom_point).
 
-![](visualization_files/figure-gfm/unnamed-chunk-7-2.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-6-2.png)<!-- -->
 
 ## Learning assessment
 
@@ -207,7 +197,7 @@ weather_df %>%
   geom_smooth(method = "lm", se = FALSE)
 ```
 
-![](visualization_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 ## 2d density
 
@@ -219,7 +209,7 @@ weather_df %>%
 
     ## Warning: Removed 15 rows containing non-finite values (stat_binhex).
 
-![](visualization_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 ``` r
 weather_df %>% 
@@ -229,7 +219,7 @@ weather_df %>%
 
     ## Warning: Removed 15 rows containing non-finite values (stat_bin2d).
 
-![](visualization_files/figure-gfm/unnamed-chunk-9-2.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
 
 ## More kind of plots
 
@@ -243,7 +233,7 @@ weather_df %>%
 
     ## Warning: Removed 3 rows containing non-finite values (stat_bin).
 
-![](visualization_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 ``` r
 weather_df %>% 
@@ -256,7 +246,7 @@ weather_df %>%
 
     ## Warning: Removed 3 rows containing non-finite values (stat_bin).
 
-![](visualization_files/figure-gfm/unnamed-chunk-10-2.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-9-2.png)<!-- -->
 
 ``` r
 weather_df %>% 
@@ -269,7 +259,7 @@ weather_df %>%
 
     ## Warning: Removed 3 rows containing non-finite values (stat_bin).
 
-![](visualization_files/figure-gfm/unnamed-chunk-10-3.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-9-3.png)<!-- -->
 
 ## density plot
 
@@ -281,7 +271,7 @@ weather_df %>%
 
     ## Warning: Removed 3 rows containing non-finite values (stat_density).
 
-![](visualization_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 ## box plot
 
@@ -293,7 +283,7 @@ weather_df %>%
 
     ## Warning: Removed 3 rows containing non-finite values (stat_boxplot).
 
-![](visualization_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ## violin plot: see the distribution
 
@@ -308,7 +298,7 @@ weather_df %>%
 
     ## Warning: Removed 3 rows containing non-finite values (stat_summary).
 
-![](visualization_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 ## ridge plots
 
@@ -322,4 +312,37 @@ ggplot(weather_df, aes(x = tmax, y = name)) +
 
     ## Warning: Removed 3 rows containing non-finite values (stat_density_ridges).
 
-![](visualization_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](visualization_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+
+# Save a plot
+
+``` r
+ggp_ridge_temp =
+  ggplot(weather_df, aes(x = tmax, y = name)) + 
+  geom_density_ridges(scale = .85)
+
+ggsave("ggplot_temp_ridge.pdf", ggp_ridge_temp) # automaticlly the last picture 
+```
+
+    ## Saving 7 x 5 in image
+
+    ## Picking joint bandwidth of 1.84
+
+    ## Warning: Removed 3 rows containing non-finite values (stat_density_ridges).
+
+# Width
+
+``` r
+weather_df %>% 
+  ggplot(aes(x = tmin,y = tmax,color = name)) +
+  geom_point(alpha = .5) +
+  geom_smooth(se = FALSE)
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
+
+    ## Warning: Removed 15 rows containing non-finite values (stat_smooth).
+
+    ## Warning: Removed 15 rows containing missing values (geom_point).
+
+![](visualization_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
